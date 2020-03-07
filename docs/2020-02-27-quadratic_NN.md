@@ -2,6 +2,7 @@
 layout: default
 title: The simplest neural network using pytorch
 nav_order: 1 
+mathjax: true
 parent: Posts
 ---
 # The simplest neural network using pytorch
