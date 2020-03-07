@@ -5,6 +5,10 @@ nav_order: 1
 mathjax: true
 parent: Posts
 ---
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 # The simplest neural network using pytorch
 
 Building a neural network from scratch might seem intimidating, but it is quite simple using `pytorch`. In this post, I will slowly build up to creating a very simple neural network that approximates the quadratic relationship between two variables, starting from the very basics. I will talk about 
