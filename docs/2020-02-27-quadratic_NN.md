@@ -2,7 +2,6 @@
 layout: default
 title: The simplest neural network using pytorch
 nav_order: 1 
-mathjax: true
 parent: Posts
 ---
 <script type="text/javascript" async
@@ -90,7 +89,7 @@ Let's start with a random estimate.
 coef_hat = torch.tensor([2.,1], requires_grad= True) #estimates of a and b || tell pytorch we need the gradients. 
 ```
 
-Let's see what our estimated $y$s look like with these values of $a$ and $b$. 
+Let's see what our estimated \\(y\\)s look like with these values of \\(a\\) and \\(b\\). 
 
 ```python
 y_hat = x@coef_hat
