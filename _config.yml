@@ -1,4 +1,25 @@
 title: "Remote theme example"
+
+# Enable or disable the site search
+search_enabled: true
+
+# Set the search token separator for hyphenated-word search:
+search_tokenizer_separator: /[\s/]+/
+
+# Enable or disable heading anchors
+heading_anchors: true
+
 remote_theme: pmarsceill/just-the-docs
-color_scheme: "dark"
-search_enabled: false
+color_scheme: nil 
+#search_enabled: false
+plugins:
+  - jekyll-seo-tag
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+
