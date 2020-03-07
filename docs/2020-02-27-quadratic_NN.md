@@ -1,8 +1,7 @@
-
 ---
 layout: default
 title: The simplest neural network using pytorch
-nav_order: 2 
+nav_order: 1 
 parent: Posts
 ---
 # The simplest neural network using pytorch
