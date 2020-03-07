@@ -18,12 +18,12 @@ Building a neural network from scratch might seem intimidating, but it is quite 
 
 
 We will start with a very simple linear relationship between variables.
-Let's say we have an independent variable $$x$$ and a dependent variable $$y$$ (both scalars) that depends upon \(x\) according to the equation 
-\\[
+Let's say we have an independent variable $$x$$ and a dependent variable $$y$$ (both scalars) that depends upon \\(x\\) according to the equation 
+\\(
 y = ax+b+ \epsilon.
-\\]
-where $\epsilon$ is the error term. 
-We only have observations for $x$ and $y$ and we are interested in estimating $a$ and $b$ such that we minimize the mean squared error between the original $y$s and the predicted \\(hat{y}\\) using the estimated $\hat{a}$ and $\hat{b}$. 
+\\)
+where \\(\epsilon\\) is the error term. 
+We only have observations for \\(x\\) and \\(y\\) and we are interested in estimating \\(a\\) and \\(b\\) such that we minimize the mean squared error between the original \\(y\\)s and the predicted \\(\hat{y}\\) using the estimated \\(\hat{a}\\) and \\(\hat{b}\\). 
 I know what you are thinking - we can use ordinary least squares regression from `statsmodels` or `R`. Yes, we can but we will do it ourselves. We will do it using gradient descent
 
 
@@ -50,9 +50,9 @@ x[:5]
 
 
 
-The first column above represents the x values, and the second is just a constant that will be multiplied by $b$
+The first column above represents the x values, and the second is just a constant that will be multiplied by \\(b\\).
 
-Let's now define a tensor to contain $a$ and $b$. 
+Let's now define a tensor to contain \\(a\\) and \\(b\\). 
 
 ```python
 coef = torch.tensor([-1.,1.5]); 
@@ -74,13 +74,13 @@ The data looks like this
 ![png](/images/quadratic_NN_files/output_9_0.png)
 
 
-Let's define a function that calculates the mean squared error between the original and the predicted $y$s. 
+Let's define a function that calculates the mean squared error between the original and the predicted \\(y\\)s. 
 
 ```python
 def mse(y, y_hat): return ((y - y_hat)**2).mean()
 ```
 
-To estimate $a$ and $b$, we will start with a random guess, calculate the value of the MSE at those values of $a$ and $b$, calculate the gradient of MSE with respect to each variable at that value, and then subtract a small proportion of that gradient from the corresponding estimate, and iterate. That's gradient descent. 
+To estimate \\(a\\) and \\(b\\), we will start with a random guess, calculate the value of the MSE at those values of \\(a\\) and \\(b\\), calculate the gradient of MSE with respect to each variable at that value, and then subtract a small proportion of that gradient from the corresponding estimate, and iterate. That's gradient descent. 
 
 `pytorch` really makes this process easy by calculating the gradients for us. All we need to do is to tell `pytorch` which quantity we need the gradients for and with respect to what variables. 
 
@@ -903,9 +903,9 @@ coef_hat
 
 
 Let's now try to do the same thing with a quadratic function of the type 
-$$
+\\(
 y = ax^2 + bx + c + \epsilon
-$$
+\\)
 
 Like before, we first generate some data. 
 
@@ -928,9 +928,9 @@ x[:5]
 
 
 
-The middle column above represents the x values, the first one stores the values of $x^2$. 
+The middle column above represents the x values, the first one stores the values of \\(x^2\\). 
 
-Let's now define a tensor that contains $a,b,$ and $c$. 
+Let's now define a tensor that contains \\(a,b,\\) and \\(c\\). 
 
 ```python
 coef = torch.tensor([4.,3,2]); 
@@ -3947,7 +3947,7 @@ aWxzdAAAACWpdG9vAAAAHWRhdGEAAAABAAAAAExhdmY1OC4yOS4xMDA=
 
 This looks exactly the same as before as it should. 
 
-Finally, let's try to approximate the quadratic relationship using a neural network. We can do it the same way as before i.e., make each input $x$ a 1d tensor of size 2 containing the values $x$ and $x^2$, but we want to not do that since we are assuming that we do not know the functional form of the relationship. We will add the non-linearity using the Relu function. 
+Finally, let's try to approximate the quadratic relationship using a neural network. We can do it the same way as before i.e., make each input \\(x\\) a 1d tensor of size 2 containing the values \\(x\\) and \\(x^2\\), but we want to not do that since we are assuming that we do not know the functional form of the relationship. We will add the non-linearity using the Relu function. 
 
 First let's generate some data using the same method as in the quadratic section above. 
 
