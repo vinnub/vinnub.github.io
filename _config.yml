@@ -10,7 +10,7 @@ search_tokenizer_separator: /[\s/]+/
 heading_anchors: true
 
 remote_theme: pmarsceill/just-the-docs
-color_scheme: nil 
+#color_scheme: nil 
 #search_enabled: false
 plugins:
   - jekyll-seo-tag
