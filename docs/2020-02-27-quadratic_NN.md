@@ -18,10 +18,10 @@ Building a neural network from scratch might seem intimidating, but it is quite 
 
 
 We will start with a very simple linear relationship between variables.
-Let's say we have an independent variable $x$ and a dependent variable $y$ (both scalars) that depends upon $x$ according to the equation 
-$$
+Let's say we have an independent variable \(x\) and a dependent variable \(y\) (both scalars) that depends upon \(x\) according to the equation 
+\[
 y = ax+b+ \epsilon.
-$$
+\]
 where $\epsilon$ is the error term. 
 We only have observations for $x$ and $y$ and we are interested in estimating $a$ and $b$ such that we minimize the mean squared error between the original $y$s and the predicted $\hat{y}$s using the estimated $\hat{a}$ and $\hat{b}$. 
 I know what you are thinking - we can use ordinary least squares regression from `statsmodels` or `R`. Yes, we can but we will do it ourselves. We will do it using gradient descent
