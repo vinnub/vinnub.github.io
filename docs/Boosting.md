@@ -97,7 +97,7 @@ Unlike AdaBoost, the most commonly used version of gradient boosting does not up
 
 <p align="center">
 <img src="/images/Boosting_files/equations.png"  
-          width="400"></p>
+          width="500"></p>
 
 where \\(f_k\\) represents the decision tree (weak learner) added at step \\(k\\) that is  constructed so as to minimize the loss between the predictions at step \\(k\\) (in our example, the \\(\hat{z}^{(k)}\\)) and the original \\(z\\). 
 
