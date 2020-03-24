@@ -94,7 +94,10 @@ We see that each weak learner splits the xy-plane at different boundaries and as
 
 Unlike AdaBoost, the most commonly used version of gradient boosting does not update the weights of the training samples based on the errors to train the next weak learner. Instead, it starts with one prediction for all the samples and additively adds weak learners (usually decision trees) that minimize the loss for a given loss function (see [this](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) for a nice overview of the math behind XGBoost, and [original XGBoost manuscript](https://arxiv.org/pdf/1603.02754.pdf) if you are interested). In our example of predicting  \\( z\\) from \\(x\\) and \\(y\\), it looks something like this 
 
-![png](/images/Boosting_files/equations.png)
+
+<p align="center">
+<img src="/images/Boosting_files/equations.png"  
+          width="400"></p>
 
 where \\(f_k\\) represents the decision tree (weak learner) added at step \\(k\\) that is  constructed so as to minimize the loss between the predictions at step \\(k\\) (in our example, the \\(\hat{z}^{(k)}\\)) and the original \\(z\\). 
 
