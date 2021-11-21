@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Boosting and XGBoost
-nav_order: 3 
-parent: Posts
+nav_order: 3
+parent: Blogposts
 mathjax: true
 ---
 <script type="text/javascript" async

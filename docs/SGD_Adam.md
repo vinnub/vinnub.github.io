@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Gradient descent optimization in deep learning
-nav_order: 2 
-parent: Posts
+nav_order: 2
+parent: Blogposts
 ---
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">

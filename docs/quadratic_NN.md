@@ -1,8 +1,8 @@
 ---
 layout: default
 title: The simplest neural network using pytorch
-nav_order: 1 
-parent: Posts
+nav_order: 1
+parent: Blogposts
 ---
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
