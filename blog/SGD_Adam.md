@@ -2,7 +2,7 @@
 layout: default
 title: Gradient descent optimization in deep learning
 nav_order: 2
-parent: Blogposts
+parent: Blog
 ---
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -20,7 +20,7 @@ In momentum, all the updates are made using the same learning rate. Adaptive Mom
 Both momentum and Adam can help converge to a local minima faster than plain gradient descent. Which is better depends upon the loss landscape i.e., the function that relates the loss to the parameters. For simple loss functions, plain gradient descent can be good enough; momentum usually accelerates the optimization of plain gradient descent, whereas Adam is generally more preferable for more complex and bumpy loss landscapes. Let's take an example of a simple loss landscape. It looks something like this.  
 
 
-![png](/images/SGD_Adam_files/output_5_0.png)
+![png](images/SGD_Adam_files/output_5_0.png)
 
 
 We have two parameters, one each on the x and y axes, and the loss on the z-axis. While doing gradient descent, we basically walk on surfaces like the one shown above and stop when we think we are at the lowest point. The variants of these gradient descent algorithms are different methods to decide how to walk.
@@ -69,7 +69,7 @@ y_trn = y[:,None]
 The data looks like this
 
 
-![png](/images/SGD_Adam_files/output_12_0.png)
+![png](images/SGD_Adam_files/output_12_0.png)
 
 
 Let's define our mean squared error
@@ -129,7 +129,7 @@ for i in range(25):
 Let's compare the results of the three algorithms.
 
 
-![png](/images/SGD_Adam_files/output_23_0.png)
+![png](images/SGD_Adam_files/output_23_0.png)
 
 
 We see that using momentum, we converge much faster than plain gradient descent. On the other hand, Adam performs much worse. The loss landscape we saw in the beginning of this post was for the data generated here. Let's see the updates at each iteration for the three algorithms.
@@ -705,7 +705,7 @@ We will generate some data according to the `MyBumpyModel` and then pretend that
 The data looks like this. 
 
 
-![png](/images/SGD_Adam_files/output_33_0.png)
+![png](images/SGD_Adam_files/output_33_0.png)
 
 
 
@@ -713,7 +713,7 @@ Like before, we can train our model using the three different optimizers and see
 
 
 
-![png](/images/SGD_Adam_files/output_37_0.png)
+![png](images/SGD_Adam_files/output_37_0.png)
 
 
 If we look at what happened here in the loss landscape, we see that our initial point was in a relatively flat area. While plain gradient descent and momentum got stuck in that flat area, Adam increased the learning rate as a result of the low average of squared gradients and was able to escape. 

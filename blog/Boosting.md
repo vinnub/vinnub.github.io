@@ -2,7 +2,7 @@
 layout: default
 title: Boosting and XGBoost
 nav_order: 3
-parent: Blogposts
+parent: Blog
 mathjax: true
 ---
 <script type="text/javascript" async
@@ -63,7 +63,7 @@ trn.shape, label.shape
 
 
 
-![png](/images/Boosting_files/output_10_0.png)
+![png](images/Boosting_files/output_10_0.png)
 
 
 ### Boosting
@@ -73,7 +73,7 @@ Our goal is to approximate the contour plot shown above on the right using an en
 
 
 
-![png](/images/Boosting_files/output_13_0.png)
+![png](images/Boosting_files/output_13_0.png)
 
 
 Depending upon the errors made by this decision stump, the next decision stump is made and so forth. 
@@ -84,7 +84,7 @@ For example, at this point, [AdaBoost](https://scikit-learn.org/stable/modules/g
 
 
 
-![png](/images/Boosting_files/output_15_0.png)
+![png](images/Boosting_files/output_15_0.png)
 
 
 We see that each weak learner splits the xy-plane at different boundaries and assigns different values on each side of the boundary. Such weak learners are then "combined" using different weights to make one strong learner. 
@@ -96,7 +96,7 @@ Unlike AdaBoost, the most commonly used version of gradient boosting does not up
 
 
 <p align="center">
-<img src="/images/Boosting_files/equations.png"  
+<img src="images/Boosting_files/equations.png"  
           width="500"></p>
 
 where \\(f_k\\) represents the decision tree (weak learner) added at step \\(k\\) that is  constructed so as to minimize the loss between the predictions at step \\(k\\) (in our example, the \\(\hat{z}^{(k)}\\)) and the original \\(z\\). 
@@ -139,7 +139,7 @@ The predictions of the model using the first 10 boosted trees look like this.
 
 
 
-![png](/images/Boosting_files/output_26_0.png)
+![png](images/Boosting_files/output_26_0.png)
 
 
 We can also look at the individual trees that were trained and then used for the predictions.
@@ -154,14 +154,14 @@ axs[1].set_title('k = 2')
 
 
 
-![png](/images/Boosting_files/output_29_0.png)
+![png](images/Boosting_files/output_29_0.png)
 
 
 This is how the predictions look on the training data. 
 
 
 
-![png](/images/Boosting_files/output_31_0.png)
+![png](images/Boosting_files/output_31_0.png)
 
 
 Now, we can use decision trees of depth more than 1 to get contour plots that look more like our original contour plot with almost concentric circles. By using trees of depth 2, we get a much better looking plot. 
@@ -169,14 +169,14 @@ Now, we can use decision trees of depth more than 1 to get contour plots that lo
 
 
 
-![png](/images/Boosting_files/output_33_0.png)
+![png](images/Boosting_files/output_33_0.png)
 
 
 In fact, we can keep increasing the depth and our contour plots will keep getting better in this example. Here's what we get for using trees of depth 4. 
 
 
 
-![png](/images/Boosting_files/output_35_0.png)
+![png](images/Boosting_files/output_35_0.png)
 
 
 But just increasing the number of parameters to get a better fit usually leads to overfitting. Here, it was not a problem because we did not add any noise in the data - \\(z\\) was a deterministic function of \\(x\\) and \\(y\\). In real world problems, there is always noise. Let's see what would happen if some noise was added and data was generated according to the equation \\[ z= x^2 + y^2 + \epsilon\\]
@@ -212,7 +212,7 @@ bst =  xgb.train(param_reg,
 
 
 
-![png](/images/Boosting_files/output_39_0.png)
+![png](images/Boosting_files/output_39_0.png)
 
 
 We see that in addition to capturing the real relationship between the predictors and the dependent variable, the model also starts to capture the noise in these particular samples. For this reason, we usually regularize our models. In boosting methods where tree ensembles are used, some of the most commonly used parameters for regularization are maximum tree depth, number of trees, learning rate etc. In XGBoost, we can use 
@@ -251,7 +251,7 @@ bst =  xgb.train(param_reg,
 
 
 
-![png](/images/Boosting_files/output_43_0.png)
+![png](images/Boosting_files/output_43_0.png)
 
 
 which is a much better representation of the relationship between \\(z\\) and \\(x,y\\), even though the training loss is a bit higher than the previous model. To get a better understanding of the parameters, I recommend reading the [documentation](https://xgboost.readthedocs.io/en/latest/parameter.html) and this [note](https://xgboost.readthedocs.io/en/latest/tutorials/param_tuning.html). Also, there are a number of blog posts about fine-tuning hyperparameters in XGBoost which you might find helpful.  

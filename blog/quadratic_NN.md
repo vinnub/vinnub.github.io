@@ -2,7 +2,7 @@
 layout: default
 title: The simplest neural network using pytorch
 nav_order: 1
-parent: Blogposts
+parent: Blog
 ---
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -70,7 +70,7 @@ y[:5]
 The data looks like this
 
 
-![png](/images/quadratic_NN_files/output_9_0.png)
+![png](images/quadratic_NN_files/output_9_0.png)
 
 
 Let's define a function that calculates the mean squared error between the original and the predicted \\(y\\)s. 
@@ -96,7 +96,7 @@ y_hat = x@coef_hat
 ```
 
 
-![png](/images/quadratic_NN_files/output_16_0.png)
+![png](images/quadratic_NN_files/output_16_0.png)
 
 
 The mean squared error is 
@@ -157,7 +157,7 @@ mse(y, x@coef_hat.data)
 
 
 
-![png](/images/quadratic_NN_files/output_27_0.png)
+![png](images/quadratic_NN_files/output_27_0.png)
 
 
 We will repeat this process a number of times and see how our predictions look. 
@@ -949,7 +949,7 @@ The data looks like this
 
 
 
-![png](/images/quadratic_NN_files/output_41_0.png)
+![png](images/quadratic_NN_files/output_41_0.png)
 
 
 Let's start with a random estimate
@@ -963,7 +963,7 @@ The predictions with our estimates look like this
 
 
 
-![png](/images/quadratic_NN_files/output_45_0.png)
+![png](images/quadratic_NN_files/output_45_0.png)
 
 
 As before, we do gradient descent and our estimates improve over time like shown below. 
@@ -3200,7 +3200,7 @@ The data looks like this.
 
 
 
-![png](/images/quadratic_NN_files/output_56_0.png)
+![png](images/quadratic_NN_files/output_56_0.png)
 
 
 We create a subclass of the `nn.Module` class as such.
@@ -3977,7 +3977,7 @@ The data looks like this
 
 
 
-![png](/images/quadratic_NN_files/output_71_0.png)
+![png](images/quadratic_NN_files/output_71_0.png)
 
 
 Let's generate a neural network class like before, but this time, we will add some nonlinearities using Relu. Let's add one hidden layer with 10 neurons. 
@@ -5862,5 +5862,5 @@ We have built a neural network that approximates the quadratic relationship betw
 
 
 
-![png](/images/quadratic_NN_files/output_81_0.png)
+![png](images/quadratic_NN_files/output_81_0.png)
 
