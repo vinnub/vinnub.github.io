@@ -5,10 +5,10 @@ title: Resources
 ---
 # Resources
 {: .no_toc }
-Here, I have a list of resources for different kinds of things that I learned in grad school including things like how to set up Jupyter on cloud, how to download NGS data efficiently etc. I still come back to these for a refresher sometimes. If you are just getting started in the field of bioinformatics and data science, some of these might be helpful.
+Here, I have a list of resources for different kinds of things that I learned in grad school including things like how to set up Jupyter on cloud, how to download NGS data efficiently etc. I still come back to these for a refresher sometimes. If you are just getting started in the field of bioinformatics and data science, some of these may be helpful.
 
 ---
-1. TOC
+- TOC
 {:toc}
 ---
 
@@ -26,7 +26,7 @@ basics and learn more as you need to instead of trying to learn it all at once.
 
 
 ### Python (Import statements and decorators)
-Having the right directory structure for your code can be really helpful and make the code much easier to understand. Understanding how import statements work (the difference between relative and absolute imports etc.) in Python can make structuring the repo a lot easier and more maintainable. This [page](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html) explains how import statements work. A highly recommended read. Another thing that I really love is Python decorators. Read [this](https://realpython.com/primer-on-python-decorators/) to get started on those. 
+Having the right directory structure for your code can be really helpful and make the code much easier to understand. Understanding how import statements work (the difference between relative and absolute imports etc.) in Python can make structuring the repo a lot easier and more maintainable. This [page](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html) explains how import statements work. A highly recommended read. Another thing that I really like is Python decorators. Read [this](https://realpython.com/primer-on-python-decorators/) to get started on those. If you like reading books, check out this short [book](https://www.amazon.com/Python-Tricks-Buffet-Awesome-Features-ebook/dp/B0785Q7GSY) on some of the cool Python features. 
 
 
 ### Jupyter on Google Cloud Platform  
