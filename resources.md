@@ -25,8 +25,8 @@ basics and learn more as you need to instead of trying to learn it all at once.
 [Here](https://www.youtube.com/watch?v=DRR9fOXkfRE&feature=youtu.be) is a quick youtube video to get started with regular expressions. 
 
 
-### Python (Import statements and decorators)
-Having the right directory structure for your code can be really helpful and make the code much easier to understand. Understanding how import statements work (the difference between relative and absolute imports etc.) in Python can make structuring the repo a lot easier and more maintainable. This [page](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html) explains how import statements work. A highly recommended read. Another thing that I really like is Python decorators. Read [this](https://realpython.com/primer-on-python-decorators/) to get started on those. If you like reading books, check out this short [book](https://www.amazon.com/Python-Tricks-Buffet-Awesome-Features-ebook/dp/B0785Q7GSY) on some of the cool Python features. 
+### Python 
+Having the right directory structure for your code is key. Understanding how import statements work (the difference between relative and absolute imports etc.) in Python can make structuring the repo a lot easier and more maintainable. This [page](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html) explains how import statements work. A highly recommended read. If you like reading books, check out this short [book](https://www.amazon.com/Python-Tricks-Buffet-Awesome-Features-ebook/dp/B0785Q7GSY) on some of the cool Python features. 
 
 
 ### Jupyter on Google Cloud Platform  
